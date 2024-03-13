@@ -20,6 +20,12 @@ public class Pessoa {
     @Column(length = 2)
     private Integer idade;
 
+    public Pessoa(String nome, Float altura, Integer idade) {
+        this.nome = nome;
+        this.altura = altura;
+        this.idade = idade;
+    }
+
     public Long getId() {
         return id;
     }
