@@ -18,24 +18,4 @@ public class DevelopApplication {
 		SpringApplication.run(DevelopApplication.class, args);
 	}
 
-	@Bean
-	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
-		return args -> {
-		
-			Pessoa p1 = new Pessoa("Cristiano", 1.2f, 23);
-			Pessoa p2 = new Pessoa("Moises", 1.3f, 30);
-			Pessoa p3 = new Pessoa("Jeremis", 1.6f, 21);
-			Pessoa p4 = new Pessoa("Martins", 2.1f, 17);
-			Pessoa p5 = new Pessoa("Mauro", 1f, 33);
-	
-			repository.save(p1);
-			repository.save(p2);
-			repository.save(p3);
-			repository.save(p4);
-			repository.save(p5);
-	
-			System.out.println("Dados iniciais inseridos");
-		};
-	}
-
 }
